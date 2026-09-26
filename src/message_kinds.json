@@ -1,0 +1,49 @@
+{
+  "order": {
+    "name": "Order",
+    "subject_words": ["order", "purchase order", "po "],
+    "fields": [
+      {"name": "order_number", "type": "text", "required": true},
+      {"name": "customer", "type": "text", "required": true},
+      {"name": "product", "type": "text", "required": true},
+      {"name": "quantity", "type": "number", "required": true},
+      {"name": "total", "type": "money", "required": true},
+      {"name": "wanted_by", "type": "date", "required": false}
+    ]
+  },
+  "delivery": {
+    "name": "Delivery notice",
+    "subject_words": ["delivery", "shipment", "dispatched", "tracking"],
+    "fields": [
+      {"name": "order_number", "type": "text", "required": true},
+      {"name": "carrier", "type": "text", "required": true},
+      {"name": "tracking_number", "type": "text", "required": true},
+      {"name": "arriving_on", "type": "date", "required": true}
+    ]
+  },
+  "quote": {
+    "name": "Quote",
+    "subject_words": ["quote", "quotation", "estimate", "proposal"],
+    "fields": [
+      {"name": "quote_number", "type": "text", "required": true},
+      {"name": "customer", "type": "text", "required": true},
+      {"name": "product", "type": "text", "required": true},
+      {"name": "total", "type": "money", "required": true},
+      {"name": "valid_until", "type": "date", "required": true}
+    ]
+  },
+  "question": {
+    "name": "Customer question",
+    "subject_words": ["question", "enquiry", "inquiry", "help", "re:"],
+    "fields": [
+      {"name": "customer", "type": "text", "required": true},
+      {"name": "asking_about", "type": "text", "required": true},
+      {"name": "order_number", "type": "text", "required": false}
+    ]
+  },
+  "newsletter": {
+    "name": "Newsletter",
+    "subject_words": ["newsletter", "digest", "weekly", "unsubscribe"],
+    "fields": []
+  }
+}
